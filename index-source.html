@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eee3d0"><title>POCKET CURRENT — Little Loops, Lovely Landings</title>
+<meta name="description" content="A pocket water-ring toy. Pump, tilt gently and let every colorful loop land on a peg.">
+<link rel="icon" type="image/svg+xml" href="icon.svg"><link rel="stylesheet" href="style.css"></head>
+<body>
+<main id="app">
+ <header><span class="brand">POCKET CURRENT <span>◌</span></span><div><button id="book" aria-label="Open tray book">▦</button><button id="pause" aria-label="Pause and settings">Ⅱ</button></div></header>
+ <aside class="intro">
+  <div class="eyebrow">LITTLE LOOPS. LOVELY LANDINGS.</div>
+  <h1>A little water.<br>A little wonder.</h1>
+  <p>Make some bubbles. Then let the magic settle.</p>
+  <div class="trayCard"><span id="trayNumber">TRAY 01 / 06</span><strong id="trayName">First Bubbles</strong><small id="trayNote">A little lift. A gentle landing.</small></div>
+  <button id="guide" class="textButton">How to play <span>?</span></button>
+  <div class="keys">← → PUMP · Q E TILT · SPACE BOTH</div>
+ </aside>
+ <section id="play" class="play" aria-label="Water-ring toy">
+  <div id="stage" class="stage">
+   <canvas id="canvas" role="img" aria-label="Red water-ring toy with colorful rings and two white pump buttons"></canvas>
+   <button id="pumpLeft" class="pump" aria-label="Left water pump">L</button>
+   <button id="pumpRight" class="pump" aria-label="Right water pump">R</button>
+   <div class="score"><span id="caught" aria-live="polite">0 / 2</span><small>RINGS HOME</small></div>
+   <div class="clock"><span id="timer">00:00</span><small>YOUR TIME</small></div>
+   <div id="win" class="win" role="status" hidden><small id="winKicker">ALL HOME</small><strong>Lovely landing.</strong><span id="stars">★ ★ ★</span><small id="winStats"></small></div>
+   <div id="error" class="error" role="alert" hidden><strong>The toy needs WebGL.</strong><span>Try opening this page in your phone's main browser.</span><button id="reload">Reload</button></div>
+  </div>
+  <div id="actions" class="actions"><button id="tiltLeft" aria-label="Tilt left">↶</button><div><span id="hint">Tap a white pump. Let the rings fall.</span><small id="progress">Two gentle landings to begin.</small></div><button id="tiltRight" aria-label="Tilt right">↷</button></div>
+  <button id="next" class="next" hidden>Next tray →</button>
+ </section>
+ <dialog id="dialog"><div class="dialogHeader"><div><span class="eyebrow">THE LITTLE WATER CLUB</span><h2 id="modalTitle"></h2></div><button id="close" aria-label="Close menu">×</button></div><div id="modalBody"></div></dialog>
+</main>
+<script src="vendor/three.min.js"></script><script type="module" src="app.mjs"></script>
+</body></html>
